@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>《纳瓦尔宝典》30条观点金句</title>
+    <meta name="description" content="《纳瓦尔宝典》30条意译版观点金句，按财富、判断、幸福、自由四组排版。">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f2eb;
+        --paper: #fffdfa;
+        --ink: #20241f;
+        --muted: #667064;
+        --line: #ddd3c3;
+        --green: #1f7a5b;
+        --red: #b6503f;
+        --gold: #d49a2f;
+        --blue: #346f9f;
+        --violet: #7059a8;
+        --shadow: 0 18px 50px rgba(38, 32, 22, .12);
+        font-family: "Inter", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          linear-gradient(90deg, rgba(31, 122, 91, .055) 1px, transparent 1px),
+          linear-gradient(180deg, #fbfaf6 0%, var(--bg) 46%, #eef4ef 100%);
+        background-size: 32px 32px, auto;
+        color: var(--ink);
+      }
+
+      .page {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 20px 0 70px;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 12px 0;
+        background: rgba(245, 242, 235, .86);
+        backdrop-filter: blur(16px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--ink);
+        text-decoration: none;
+      }
+
+      .mark {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        background: var(--ink);
+        color: #fff2d2;
+        font-weight: 900;
+      }
+
+      .brand strong,
+      .brand small {
+        display: block;
+      }
+
+      .brand small {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .nav a {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        background: rgba(255, 253, 250, .78);
+        color: var(--muted);
+        font-size: 13px;
+        text-decoration: none;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 34px;
+        align-items: center;
+        min-height: min(610px, calc(100vh - 74px));
+        padding: 50px 0 38px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--red);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: .1em;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 800px;
+        margin-bottom: 18px;
+        font-size: clamp(42px, 7vw, 88px);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 700px;
+        color: #4d554d;
+        font-size: 19px;
+        line-height: 1.85;
+      }
+
+      .hero-note {
+        margin-top: 22px;
+        border-left: 4px solid var(--gold);
+        padding: 10px 0 10px 14px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .poster {
+        position: relative;
+        min-height: 430px;
+        border-radius: 8px;
+        padding: 26px;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(255,255,255,.18), transparent 38%),
+          linear-gradient(180deg, #1f7a5b, #233e35);
+        color: #fff6db;
+        box-shadow: var(--shadow), inset 14px 0 rgba(0, 0, 0, .16);
+      }
+
+      .poster::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px solid rgba(255, 246, 219, .42);
+      }
+
+      .poster-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 376px;
+      }
+
+      .poster span {
+        color: #f3c56b;
+        font-weight: 900;
+        letter-spacing: .12em;
+      }
+
+      .poster strong {
+        display: block;
+        max-width: 230px;
+        font-size: 46px;
+        line-height: 1.08;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .stats div {
+        border: 1px solid rgba(255, 246, 219, .28);
+        border-radius: 8px;
+        padding: 12px;
+        background: rgba(255, 255, 255, .08);
+      }
+
+      .stats b,
+      .stats small {
+        display: block;
+      }
+
+      .stats b {
+        font-size: 26px;
+      }
+
+      .stats small {
+        color: rgba(255, 246, 219, .72);
+      }
+
+      .section {
+        margin-top: 36px;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+        margin-bottom: 16px;
+      }
+
+      h2 {
+        margin-bottom: 4px;
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.12;
+      }
+
+      .section-head p {
+        max-width: 560px;
+        margin-bottom: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .quote-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .quote-card {
+        position: relative;
+        min-height: 245px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 20px;
+        overflow: hidden;
+        background: rgba(255, 253, 250, .9);
+        box-shadow: 0 12px 34px rgba(38, 32, 22, .08);
+      }
+
+      .quote-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 5px;
+        background: var(--accent);
+      }
+
+      .quote-card::after {
+        content: "“";
+        position: absolute;
+        right: 16px;
+        bottom: -26px;
+        color: rgba(32, 36, 31, .06);
+        font-family: Georgia, serif;
+        font-size: 130px;
+        line-height: 1;
+      }
+
+      .wealth { --accent: var(--green); }
+      .judgment { --accent: var(--blue); }
+      .happiness { --accent: var(--gold); }
+      .freedom { --accent: var(--violet); }
+
+      .quote-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .number {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        background: var(--accent);
+        color: white;
+        font-weight: 900;
+      }
+
+      .tag {
+        border-radius: 999px;
+        padding: 5px 9px;
+        background: #f0ece4;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      blockquote {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        color: #242923;
+        font-size: 23px;
+        font-weight: 800;
+        line-height: 1.55;
+      }
+
+      .note {
+        position: relative;
+        z-index: 1;
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .wide {
+        grid-column: span 2;
+      }
+
+      .dark {
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, .09), transparent 38%),
+          #20241f;
+        color: #fff6db;
+      }
+
+      .dark blockquote {
+        color: #fff8e7;
+      }
+
+      .dark .note {
+        color: rgba(255, 248, 231, .72);
+      }
+
+      .dark::after {
+        color: rgba(255, 255, 255, .08);
+      }
+
+      .closing {
+        margin-top: 42px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 28px;
+        background: linear-gradient(135deg, #fffdf9, #eef6f1);
+        box-shadow: var(--shadow);
+      }
+
+      .closing h2 {
+        max-width: 820px;
+      }
+
+      .closing p {
+        max-width: 860px;
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 1000px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .poster {
+          min-height: 290px;
+        }
+
+        .poster-content {
+          min-height: 238px;
+        }
+
+        .quote-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 680px) {
+        .page {
+          width: min(100% - 22px, 1180px);
+          padding-top: 10px;
+        }
+
+        .topbar,
+        .section-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav {
+          justify-content: flex-start;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 30px 0;
+        }
+
+        h1 {
+          font-size: 42px;
+        }
+
+        .lead {
+          font-size: 17px;
+        }
+
+        .quote-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .wide {
+          grid-column: span 1;
+        }
+
+        blockquote {
+          font-size: 21px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="回到顶部">
+          <span class="mark">30</span>
+          <span>
+            <strong>《纳瓦尔宝典》观点金句</strong>
+            <small>意译整理 · 适合复盘与分享</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="页面导航">
+          <a href="#wealth">财富</a>
+          <a href="#judgment">判断</a>
+          <a href="#happiness">幸福</a>
+          <a href="#freedom">自由</a>
+        </nav>
+      </header>
+
+      <section id="top" class="hero">
+        <div>
+          <p class="eyebrow">THE ALMANACK OF NAVAL RAVIKANT</p>
+          <h1>30条金句，读懂一套自由人生算法</h1>
+          <p class="lead">
+            这组句子按“财富、判断、幸福、自由”四个主题整理。它不是逐字摘抄，而是对书中核心思想的中文意译与凝练，适合做读书会展示、个人复盘或打印成卡片。
+          </p>
+          <p class="hero-note">
+            使用方法：先扫一遍标题，再挑出最刺中自己的 3 条，写下“我现在的行为是否真的符合它？”
+          </p>
+        </div>
+
+        <aside class="poster" aria-label="金句海报">
+          <div class="poster-content">
+            <span>QUOTE CARDS</span>
+            <strong>财富 判断 幸福 自由</strong>
+            <div class="stats">
+              <div><b>30</b><small>观点金句</small></div>
+              <div><b>4</b><small>主题系统</small></div>
+              <div><b>1</b><small>自由目标</small></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="wealth" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">01 / WEALTH</p>
+            <h2>财富：别出售时间，要拥有资产</h2>
+          </div>
+          <p>纳瓦尔谈财富时，真正强调的是从线性劳动转向非线性回报。</p>
+        </div>
+
+        <div class="quote-grid">
+          <article class="quote-card wealth wide">
+            <div class="quote-meta"><span class="number">01</span><span class="tag">资产</span></div>
+            <blockquote>财富不是银行里的数字，而是不用亲自到场也能为你工作的系统。</blockquote>
+            <p class="note">从工资思维转向资产思维，是全书财富部分的起点。</p>
+          </article>
+          <article class="quote-card wealth">
+            <div class="quote-meta"><span class="number">02</span><span class="tag">时间</span></div>
+            <blockquote>如果收入只来自时间，你就永远被时间定价。</blockquote>
+            <p class="note">真正的目标不是更忙，而是让成果脱离工时上限。</p>
+          </article>
+          <article class="quote-card wealth">
+            <div class="quote-meta"><span class="number">03</span><span class="tag">专长</span></div>
+            <blockquote>找到那件对你像玩、对别人像苦工的事。</blockquote>
+            <p class="note">专长知识常常藏在兴趣、天赋和长期经验的交叉处。</p>
+          </article>
+          <article class="quote-card wealth">
+            <div class="quote-meta"><span class="number">04</span><span class="tag">杠杆</span></div>
+            <blockquote>现代杠杆的门槛很低：代码能复制，媒体能传播。</blockquote>
+            <p class="note">不用等待许可，也能开始构建可放大的作品。</p>
+          </article>
+          <article class="quote-card wealth dark">
+            <div class="quote-meta"><span class="number">05</span><span class="tag">责任</span></div>
+            <blockquote>承担责任，才配得到非对称回报。</blockquote>
+            <p class="note">匿名执行者拿薪水，公开负责者积累声誉和收益。</p>
+          </article>
+          <article class="quote-card wealth">
+            <div class="quote-meta"><span class="number">06</span><span class="tag">复利</span></div>
+            <blockquote>最值得复利的，不只是钱，还有信誉、判断和作品。</blockquote>
+            <p class="note">长期主义不是慢，而是让每一步都能接上下一步。</p>
+          </article>
+          <article class="quote-card wealth">
+            <div class="quote-meta"><span class="number">07</span><span class="tag">游戏</span></div>
+            <blockquote>选择能长期重复的游戏，短局赢太多也可能是陷阱。</blockquote>
+            <p class="note">能积累信任、能力和资产的游戏，才值得下注。</p>
+          </article>
+          <article class="quote-card wealth">
+            <div class="quote-meta"><span class="number">08</span><span class="tag">创造</span></div>
+            <blockquote>市场奖励稀缺而有用的东西，不奖励单纯辛苦。</blockquote>
+            <p class="note">努力要接入价值创造，否则只是体力消耗。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="judgment" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02 / JUDGMENT</p>
+            <h2>判断：清醒比聪明更稀缺</h2>
+          </div>
+          <p>判断力是隐形杠杆，它决定你是否把能力投入到正确的人、问题和机会里。</p>
+        </div>
+
+        <div class="quote-grid">
+          <article class="quote-card judgment">
+            <div class="quote-meta"><span class="number">09</span><span class="tag">清晰</span></div>
+            <blockquote>真正的聪明，是愿意把问题看简单，而不是说复杂。</blockquote>
+            <p class="note">清晰表达往往来自清晰思考。</p>
+          </article>
+          <article class="quote-card judgment">
+            <div class="quote-meta"><span class="number">10</span><span class="tag">事实</span></div>
+            <blockquote>先接受事实，再谈改变；和现实争辩只会消耗自己。</blockquote>
+            <p class="note">接受不是投降，而是停止浪费注意力。</p>
+          </article>
+          <article class="quote-card judgment wide">
+            <div class="quote-meta"><span class="number">11</span><span class="tag">独立</span></div>
+            <blockquote>共识里很少有超额收益，独立判断才可能带来独特结果。</blockquote>
+            <p class="note">独立不是反对所有人，而是不把多数意见当证据。</p>
+          </article>
+          <article class="quote-card judgment">
+            <div class="quote-meta"><span class="number">12</span><span class="tag">阅读</span></div>
+            <blockquote>读那些经得起时间淘洗的东西，少被即时噪音牵走。</blockquote>
+            <p class="note">高质量输入，会慢慢改变你的默认判断。</p>
+          </article>
+          <article class="quote-card judgment dark">
+            <div class="quote-meta"><span class="number">13</span><span class="tag">自我</span></div>
+            <blockquote>自尊若依赖正确，就会害怕修正；判断若服务真相，就会主动更新。</blockquote>
+            <p class="note">把错误当信息，而不是身份威胁。</p>
+          </article>
+          <article class="quote-card judgment">
+            <div class="quote-meta"><span class="number">14</span><span class="tag">决策</span></div>
+            <blockquote>大多数人生差距，不来自答案，而来自选了不同的问题。</blockquote>
+            <p class="note">问题本身就是方向盘。</p>
+          </article>
+          <article class="quote-card judgment">
+            <div class="quote-meta"><span class="number">15</span><span class="tag">概率</span></div>
+            <blockquote>把世界看成概率，而不是剧情，你会少很多愤怒。</blockquote>
+            <p class="note">概率思维让人更稳，也更愿意做长期准备。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="happiness" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 / HAPPINESS</p>
+            <h2>幸福：欲望越少，注意力越自由</h2>
+          </div>
+          <p>幸福不是成功之后的奖赏，而是可以训练的内在能力。</p>
+        </div>
+
+        <div class="quote-grid">
+          <article class="quote-card happiness wide">
+            <div class="quote-meta"><span class="number">16</span><span class="tag">欲望</span></div>
+            <blockquote>每个强烈欲望，都是一份“在满足前不得安宁”的合约。</blockquote>
+            <p class="note">不是消灭愿望，而是看清它的心理成本。</p>
+          </article>
+          <article class="quote-card happiness">
+            <div class="quote-meta"><span class="number">17</span><span class="tag">比较</span></div>
+            <blockquote>比较会偷走快乐，因为它让你活在别人的计分板上。</blockquote>
+            <p class="note">越依赖外部排名，越难获得内部稳定。</p>
+          </article>
+          <article class="quote-card happiness">
+            <div class="quote-meta"><span class="number">18</span><span class="tag">当下</span></div>
+            <blockquote>幸福常常不是获得更多，而是少一点心理噪音。</blockquote>
+            <p class="note">安静不是空白，而是注意力回到自己身上。</p>
+          </article>
+          <article class="quote-card happiness dark">
+            <div class="quote-meta"><span class="number">19</span><span class="tag">冥想</span></div>
+            <blockquote>冥想不是逃离世界，而是看见自己如何制造世界。</blockquote>
+            <p class="note">观察念头，是从念头里退后一步。</p>
+          </article>
+          <article class="quote-card happiness">
+            <div class="quote-meta"><span class="number">20</span><span class="tag">身体</span></div>
+            <blockquote>身体状态是思想的地基，疲惫的人很难保持哲学。</blockquote>
+            <p class="note">睡眠、运动、饮食不是附属品，而是判断和幸福的基础设施。</p>
+          </article>
+          <article class="quote-card happiness">
+            <div class="quote-meta"><span class="number">21</span><span class="tag">接受</span></div>
+            <blockquote>痛苦常来自现实和期待之间的拉扯。</blockquote>
+            <p class="note">看清期待，才能重新选择。</p>
+          </article>
+          <article class="quote-card happiness">
+            <div class="quote-meta"><span class="number">22</span><span class="tag">平静</span></div>
+            <blockquote>平静不是没有问题，而是不再让每个问题占领你。</blockquote>
+            <p class="note">成熟的注意力，知道什么值得进入内心。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="freedom" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">04 / FREEDOM</p>
+            <h2>自由：最终目标是选择权</h2>
+          </div>
+          <p>财富、判断和幸福最后都指向同一件事：你能否更少被迫，更能主动选择。</p>
+        </div>
+
+        <div class="quote-grid">
+          <article class="quote-card freedom">
+            <div class="quote-meta"><span class="number">23</span><span class="tag">选择</span></div>
+            <blockquote>自由不是想要什么都有，而是不想要什么时能拒绝。</blockquote>
+            <p class="note">拒绝权，是财富最珍贵的用途之一。</p>
+          </article>
+          <article class="quote-card freedom wide dark">
+            <div class="quote-meta"><span class="number">24</span><span class="tag">时间</span></div>
+            <blockquote>真正的奢侈品，是醒来后知道今天属于自己。</blockquote>
+            <p class="note">时间自由比消费自由更接近纳瓦尔所说的自由。</p>
+          </article>
+          <article class="quote-card freedom">
+            <div class="quote-meta"><span class="number">25</span><span class="tag">身份</span></div>
+            <blockquote>别为了维护旧身份，继续支付新人生不该支付的成本。</blockquote>
+            <p class="note">成长常常意味着允许自己不再像过去那样生活。</p>
+          </article>
+          <article class="quote-card freedom">
+            <div class="quote-meta"><span class="number">26</span><span class="tag">关系</span></div>
+            <blockquote>好的关系让你更像自己，坏的关系让你不断表演。</blockquote>
+            <p class="note">自由也包括不在关系里长期违背自己。</p>
+          </article>
+          <article class="quote-card freedom">
+            <div class="quote-meta"><span class="number">27</span><span class="tag">注意力</span></div>
+            <blockquote>谁控制你的注意力，谁就在部分控制你的人生。</blockquote>
+            <p class="note">信息饮食会塑造心智体型。</p>
+          </article>
+          <article class="quote-card freedom">
+            <div class="quote-meta"><span class="number">28</span><span class="tag">孤独</span></div>
+            <blockquote>能独处的人，才更不容易被低质量热闹收买。</blockquote>
+            <p class="note">独处不是退缩，而是保持内在主权。</p>
+          </article>
+          <article class="quote-card freedom wide">
+            <div class="quote-meta"><span class="number">29</span><span class="tag">终点</span></div>
+            <blockquote>人生不是优化到所有指标最高，而是活成一个自己愿意负责的版本。</blockquote>
+            <p class="note">外部成绩需要被内部价值校准。</p>
+          </article>
+          <article class="quote-card freedom">
+            <div class="quote-meta"><span class="number">30</span><span class="tag">整合</span></div>
+            <blockquote>最好的系统，是让你更富有、更清醒，也更安静。</blockquote>
+            <p class="note">这也是整本书最值得带走的结构。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing" aria-label="总结">
+        <p class="eyebrow">TAKEAWAY</p>
+        <h2>把金句当成镜子，而不是装饰。</h2>
+        <p>
+          《纳瓦尔宝典》的价值不在于记住多少漂亮句子，而在于它逼你重新检查：我是否在出售时间？我是否选对游戏？我是否被欲望牵着走？我是否真的拥有选择权？
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
