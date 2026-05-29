@@ -1,0 +1,12 @@
+dist/
+node_modules/
+.wrangler/
+.dev.vars
+
+# Local unrelated captures in this workspace.
+guru-mobile-intro-offline/
+guru-mobile-intro.raw.html
+guru-site-offline/
+mirror-guru-site.mjs
+package-guru-page.ps1
+guru-site-offline.zip
