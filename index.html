@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>微信读书共读整理</title>
+    <meta name="description" content="把微信读书多人共读同一本书的划线和感想整理到一起。">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <button class="brand" type="button" data-action="reset-filter" aria-label="回到全部内容">
+          <span class="brand-mark">阅</span>
+          <span>
+            <strong>共读书房</strong>
+            <small>微信读书划线与感想整理</small>
+          </span>
+        </button>
+        <div class="top-actions">
+          <button class="ghost-button" type="button" data-action="export">导出 Markdown</button>
+          <button class="primary-button" type="button" data-action="open-import">导入数据</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="book-cover" aria-hidden="true">
+          <span>共同阅读</span>
+          <strong id="cover-title">置身事内</strong>
+          <small id="cover-author">兰小欢</small>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">一起读同一本书</p>
+          <h1 id="book-title">置身事内：中国政府与经济发展</h1>
+          <p id="book-summary">汇总成员在微信读书里的划线、想法和追问，按章节与主题整理，方便共读会复盘、写读书笔记和沉淀讨论材料。</p>
+          <div class="metrics" aria-label="共读统计">
+            <div><strong id="metric-members">6</strong><span>成员</span></div>
+            <div><strong id="metric-highlights">18</strong><span>划线</span></div>
+            <div><strong id="metric-thoughts">15</strong><span>感想</span></div>
+            <div><strong id="metric-themes">5</strong><span>主题</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="panel controls" aria-label="筛选与视图">
+          <div class="panel-head">
+            <h2>整理方式</h2>
+            <button class="icon-button" type="button" title="清空筛选" data-action="reset-filter">重置</button>
+          </div>
+
+          <section class="sync-box" aria-label="微信读书同步">
+            <h3>微信读书同步</h3>
+            <p id="sync-status">正在检查本地服务...</p>
+            <label class="field">
+              <span>API Key</span>
+              <input id="weread-key" type="password" placeholder="wrk-...，仅保存在本次本机服务">
+            </label>
+            <button class="ghost-button full" type="button" data-action="save-weread-key">保存 API Key</button>
+            <label class="toggle-row">
+              <input id="append-sync" type="checkbox" checked>
+              <span>同步时追加到当前共读，不覆盖已有成员</span>
+            </label>
+            <label class="field">
+              <span>书名或 bookId</span>
+              <input id="weread-query" type="text" placeholder="例如：置身事内 或 3300045871">
+            </label>
+            <label class="field">
+              <span>成员名</span>
+              <input id="weread-member" type="text" placeholder="默认：我">
+            </label>
+            <div class="sync-actions">
+              <button class="ghost-button" type="button" data-action="load-notebooks">笔记本列表</button>
+              <button class="primary-button" type="button" data-action="sync-weread">同步本书</button>
+            </div>
+            <select id="notebook-select" aria-label="选择有笔记的书">
+              <option value="">选择一本有笔记的书</option>
+            </select>
+          </section>
+
+          <label class="field">
+            <span>搜索</span>
+            <input id="search" type="search" placeholder="搜划线、感想、成员、主题">
+          </label>
+          <div class="segmented" role="tablist" aria-label="视图">
+            <button class="active" type="button" data-view="chapter">章节</button>
+            <button type="button" data-view="theme">主题</button>
+            <button type="button" data-view="member">成员</button>
+          </div>
+          <div class="filter-group">
+            <h3>成员</h3>
+            <div id="member-filters" class="chip-list"></div>
+          </div>
+          <div class="filter-group">
+            <h3>主题</h3>
+            <div id="theme-filters" class="chip-list"></div>
+          </div>
+          <form id="note-form" class="note-form">
+            <h3>手动补充</h3>
+            <input name="member" placeholder="成员名" required>
+            <input name="chapter" placeholder="章节" required>
+            <input name="theme" placeholder="主题，例如 财税关系" required>
+            <textarea name="highlight" placeholder="划线原文" required></textarea>
+            <textarea name="thought" placeholder="感想、问题或讨论结论"></textarea>
+            <button class="primary-button full" type="submit">加入共读笔记</button>
+          </form>
+        </aside>
+
+        <section class="board" aria-live="polite">
+          <div class="board-head">
+            <div>
+              <p class="eyebrow">整理结果</p>
+              <h2 id="view-title">按章节汇总</h2>
+            </div>
+            <button class="ghost-button" type="button" data-action="copy-json">复制数据 JSON</button>
+          </div>
+          <div id="groups" class="groups"></div>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="import-dialog" class="modal">
+      <form method="dialog" class="modal-card">
+        <button class="close-button" type="submit" aria-label="关闭">×</button>
+        <h2>导入微信读书共读数据</h2>
+        <p>粘贴整理后的 JSON。每条记录至少包含 member、chapter、highlight，可选 thought、theme、range、createdAt。</p>
+        <textarea id="import-json" spellcheck="false"></textarea>
+        <label class="toggle-row">
+          <input id="append-import" type="checkbox" checked>
+          <span>导入时追加到当前共读</span>
+        </label>
+        <div class="modal-actions">
+          <button class="ghost-button" type="button" data-action="load-sample">恢复示例</button>
+          <button class="primary-button" type="button" data-action="apply-import">应用导入</button>
+        </div>
+        <p id="import-message" class="form-message"></p>
+      </form>
+    </dialog>
+
+    <template id="group-template">
+      <article class="group-card">
+        <button class="group-title" type="button">
+          <span></span>
+          <strong></strong>
+        </button>
+        <div class="note-list"></div>
+      </article>
+    </template>
+
+    <template id="note-template">
+      <article class="note-card">
+        <div class="note-meta">
+          <span class="avatar"></span>
+          <strong></strong>
+          <small></small>
+        </div>
+        <blockquote></blockquote>
+        <p></p>
+        <div class="note-tags"></div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
